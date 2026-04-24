@@ -1,0 +1,343 @@
+img {
+    width: 100%;
+    display: block;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Specific Heading Sizes from Assignment Brief */
+h1 {
+    font-weight: 500; 
+    font-size: 2.027rem;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.266rem;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.266rem;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.5em;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+header {
+  background-color: #fff;
+
+}
+
+header .wrapper {
+   
+    color: #000;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* gap: 10px;
+    padding-block: 10px; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nav Links */
+.nav-links {
+    background-color: #fff;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0; 
+    padding: 20px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+   
+}
+
+.nav-links a {
+    background-color: #fff;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    display: flex;
+   
+}
+
+.logo {
+    max-width: 300px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Product Gallery */
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 20px;
+}
+
+.product-gallery img:nth-child(1) {
+    grid-column: 1 / span 3;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+}
+  
+.product-gallery img:not(:first-child) {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (min-width: 768px){
+.product-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+
+.product-gallery img:nth-child(1) {
+    grid-column: auto;
+}
+}
+
+@media (min-width: 960px) {
+.product-gallery {
+    display: grid;
+    flex-direction: row;
+    align-items: start;
+    gap: 60px;
+}
+.product-gallery {
+        flex: 1; /* Takes up half the space */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+    }
+
+    #sweethearts {
+        flex: 1; /* Takes up the other half */
+        padding: 0;
+        text-align: left; /* Ensure text aligns left like the mockup */
+    }
+
+    #sweethearts h1 {
+        margin-top: 0; /* Keeps heading level with the top of the images */
+    }
+}
+    
+
+
+/* --- Sweetheart's Affair Section --- */
+#sweethearts {
+    padding: 20px;
+}
+
+#sweethearts h1 {
+    color: #000;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+#sweethearts h2 {
+    color: #000;
+    text-transform: uppercase; 
+    margin: auto;
+    padding: 0;
+}
+
+/* Product Details & Price */
+#sweethearts p {
+    color: #222; 
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+
+/* --- The Button --- */
+.btn {
+    display: inline-block;
+    background-color: #000; /* Requirement: #000 */
+    color: #fff;            /* Requirement: #fff */
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: 600;
+
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #222; /* Requirement: #222 */
+}
+
+#behind-the-dough {
+   background-color: #f8fafc; /* Requirement: #f8fafc */
+    padding-block: 60px;
+}
+#behind-the-dough h1 {
+text-align: center;
+}
+
+#behind-the-dough .wrapper{
+    margin: auto;
+    width: 100%; 
+}
+
+#behind-the-dough .behind-text {
+    max-width: 1200px;
+    margin: auto;
+    padding-inline: 20px;
+}
+
+@media (min-width: 768px) {
+    #behind-the-dough .behind-text {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 40px;
+        align-items: start;
+    }
+    
+    #behind-the-dough h1 {
+        grid-column: 1 / span 2; /* Title stays centered on top */
+        margin-bottom: 40px;
+    }
+}
+
+/* What are People saying */
+#reviews {
+    background-color: #000; 
+    color: #fff;
+    padding-block: 60px; 
+}
+
+#reviews > div {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+
+#reviews h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#reviews article {
+    margin-bottom: 50px;
+    padding-inline: 20px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    #reviews .review-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Two equal columns */
+        gap: 40px;
+        align-items: start;
+    }
+    
+    #behind-the-dough h1 {
+        grid-column: 1 / span 2; /* Title stays centered on top */
+        margin-bottom: 40px;
+    }
+}
+
+
+
+/* --- Upsell Section --- */
+
+#upsell h1 {
+    margin: 40px;
+    text-align: center;
+}
+
+
+#upsell  {
+    padding-inline: 20px;
+    text-align: center;
+   
+}
+
+#upsell p {
+    padding-inline: 20px;
+    text-align: center;
+}
+
+.upsell-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+}
+
+.upsell-grid article {
+    background-color: #f8fafc; 
+    border-radius: 8px;
+
+}
+
+.upsell-grid img {
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+@media (min-width: 768px){
+.upsell-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+}
+
+footer {
+    background-color: #000; 
+    color: #fff;            
+    text-align: center;
+    padding-block: 25px;    
+    margin-top: 60px;       
+}
+
+footer p {
+    font-size: 0.8rem;      
+    margin-bottom: 0;       
+}
+
+
+
+
+
+
+
+
+
